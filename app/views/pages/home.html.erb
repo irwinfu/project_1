@@ -10,19 +10,15 @@
                 </tr>
         </thead>
         <tbody>
-                <tr>
-                        <td>project_0</td>
-                        <td>Environment Set Up</td>
-                        <td><a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book#sec-rails_installer_windows">  /</a></td>
-                </tr>
+ <% PROJECTS.each do |project, data| %>
+            <tr>
+                <td><%= project %></td>
+                <td><%= data['description'] %></td>
+                <td><%= link_to data['url'], data['url'] %></a></td>
+            </tr>
+        <% end %>
 
 
-
-                <tr>
-                        <td>project_1</td>
-                        <td>Custom Home Page Route</td>
-                        <td><a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book#sec-rails_installer_windows">  /</a></td>
-                </tr>
 
         </tbody>
         </table>
